@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+
+/*** ESTILOS DEL HEADER Y SUB HEADER ***/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+body {
+  background-color: #001c57;
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+}
+
+header {
+  background-image: linear-gradient(#023047, #023e8a);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 100px;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 90px;
+  height: auto;
+}
+
+.buscador {
+  flex: 1;
+  margin: 0 20px;
+  background-color: transparent;
+  color: #fff;
+}
+
+.buscador input {
+  width: 100%;
+  padding: 15px;
+  border: 3px solid #fff;
+  border-radius: 5px;
+  background-color: transparent;
+}
+
+.idioma,
+.login-registro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.idioma i,
+.login-registro i {
+  padding-right: 1rem;
+  font-size: 24px;
+  color: #fff;
+}
+
+.idioma a,
+.login-registro a {
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  transition: color 0.7s;
+}
+
+.idioma a:hover,
+.login-registro a:hover {
+  color: #e63946;
+}
+
+.carrito {
+  font-size: 24px;
+  padding: 2rem;
+}
+
+.carrito i {
+  color: #fff;
+}
+
+.carrito i:hover {
+  cursor: pointer;
+  color: #e63946;
+  transition: all .7s ease;
+}
+
+nav.subheader {
+  background-image: linear-gradient(#333, #1d2d44);
+  color: #fff;
+  padding-left: 4rem;
+}
+
+.subheader__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.subheader__item {
+  margin-right: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subheader__link {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 5rem;
+  z-index: 2;
+  transition: 0.5s ease;
+}
+
+.subheader__link:hover {
+  color: #fca311;
+  cursor: pointer;
+}
+
+section.gallery {
+  display: flex;
+  width: 100%;
+  height: 350px;
+}
+
+section.gallery img {
+  width: 0;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.3s ease;
+}
+
+section.gallery img:hover {
+  cursor: crosshair;
+  opacity: 0.6;
+  filter: contrast(120%);
+}
+/*** ESTILOS DEL HEADER Y SUB HEADER FINAL****/
+
+.card-title {
+  position: absolute;
+  top: 50px; /* Ajusta la posición vertical según tus necesidades */
+  left: 50%; /* Coloca el título en el centro horizontal del contenedor */
+  transform: translateX(-50%); /* Centra horizontalmente el título */
+  padding: 10px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Muestra 4 tarjetas en una fila */
+  gap: 20px; /* Espacio entre tarjetas */
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-image: linear-gradient(#023047, #023e8a);
+  justify-content: center; /* Centra horizontalmente las tarjetas */
+  padding-top: 120px; /* Añade espacio en la parte superior para el título */
+  position: relative;
+}
+
+
+/* Ocultar la barra de desplazamiento horizontal */
+.cards-container::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  display: none; /* Ocultar la barra de desplazamiento por defecto */
+}
+
+/* Mostrar la barra de desplazamiento horizontal al pasar el cursor */
+.cards-container:hover::-webkit-scrollbar {
+  display: block;
+}
+
+/* Estilo de la barra de desplazamiento */
+.cards-container::-webkit-scrollbar-thumb {
+  background-color: #818588;
+  border-radius: 6px;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que las tarjetas se desplacen a la siguiente fila */
+  gap: 20px; /* Espacio entre tarjetas */
+  scroll-snap-type: x mandatory;
+  padding: 10px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 0 0 calc(25% - 20px);
+  scroll-snap-align: start;
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden; /* Agrega esta propiedad */
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card__image img {
+  width: 100%;
+  height: 50%;
+  display: block; /* Asegúrate de que la imagen se muestre como un bloque */
+}
+
+.card__content {
+  padding: 20px;
+  position: relative; /* Agrega esta propiedad */
+}
+
+.card__title {
+  font-size: 1.25rem;
+  margin: 0 0 10px;
+  color: black; /* Corrije el color de texto a negro */
+  position: relative; /* Agrega esta propiedad */
+  z-index: 1; /* Asegúrate de que el título esté por encima de otros elementos */
+}
+
+.card__description {
+  font-size: 0.875rem;
+  color: #777;
+  margin: 0;
+}
+
+.card__link {
+  text-decoration: none;
+  color: #0078d4;
+  font-weight: 600;
+  display: block;
+  margin-top: 15px;
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.nav-button {
+  background-color: #818588;
+  border: none;
+  border-radius: 4px;
+  width: 90px; /* Aumenta el ancho del botón */
+  height: 70px; /* Aumenta la altura del botón */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease-in-out;
+  margin: 0 10px;
+  z-index: 1;
+}
+
+.nav-button:hover {
+  background-color: #ebf1f5;
+}
+
+.nav-button svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+.nav-button--left svg {
+  transform: scaleX(-1);
+}
+
+.show-all-button {
+  background-color: #001c57; /* Color de fondo igual que el fondo principal */
+  color: #fff; /* Color del texto blanco */
+  border: 2px solid #fff; /* Borde blanco de 2px */
+  border-radius: 4px; /* Bordes redondeados */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño del texto */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Transición de color de fondo */
+  display: block; /* Hacer que el botón sea un bloque para centrarlo */
+  margin: 0 auto; /* Centrar horizontalmente */
+  text-align: center; /* Centrar el texto horizontalmente */
+  width: fit-content; /* Ajustar el ancho al contenido */
+}
+
+.show-all-button:hover {
+  background-color: #00091d; /* Color gris claro al pasar el ratón */
+}
+
+.like-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo transparente */
+  padding: 5px;
+  border-radius: 0 0 10px 0; /* Ajusta el radio según tus preferencias */
+  z-index: 1; /* Asegura que esté por encima del contenido de la tarjeta */
+  visibility: hidden; /* Oculta la tirita por defecto */
+  transition: visibility 0.3s; /* Agrega una transición suave */
+}
+
+.card:hover .like-overlay {
+  visibility: visible; /* Muestra la tirita al colocar el mouse sobre la tarjeta */
+}
+
+.like-overlay i.fa-heart {
+  color: white;
+  font-size: 24px; /* Tamaño del corazón */
+}
+
+/*Footer*/
+
+h1 {
+  color: white;
+  margin-top: 0;
+  padding-right: 730px; /* Ajusta el espaciado izquierdo según tus preferencias */
+}
+
+.containerfooter {
+  text-align: center;
+}
+
+.cards-containerfooter {
+  display: flex; /* Usamos flexbox para mostrar elementos en una fila */
+  justify-content: center; /* Centramos los elementos horizontalmente */
+  flex-wrap: wrap;
+}
+
+.cardfooter {
+  background-color: #5825CC;
+  border: 1px solid #5825CC;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cardfooter img {
+  width: 35px;
+  height: 50px;
+}
+
+.cardfooter p {
+  color: white;
+}
+
+.OlFsps {
+  min-width: 194px;
+  margin: 40px auto 0;
+  transition: background-color 150ms ease-in-out, border-color 150ms ease-in-out;
+  cursor: pointer; /* Cambia el cursor al puntero cuando se coloca encima */
+}
+
+.OlFsps:hover {
+  background-color: #fff; /* Cambia el fondo al color deseado */
+  border-color: #000; /* Cambia el color del borde al deseado */
+  color: #000; /* Cambia el color del texto al deseado */
+}
+
+.w6wAha {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid;
+  color: #fff;
+}
