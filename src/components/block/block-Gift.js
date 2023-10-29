@@ -3,7 +3,8 @@ import '../../App.css';
 
 export const Gifts = () => {
     return (
-        <div className="container">
+        <div className="main">
+            <div className="container">
             <div className="navigation">
                 <button className="nav-button nav-button--left">
                     <svg width="9" height="15" viewBox="0 0 9 15">
@@ -139,6 +140,7 @@ export const Gifts = () => {
                 </button>
             </div>
             <button className="show-all-button">Mostrar todo</button>
+        </div>
         </div>
     );
 }

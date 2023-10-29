@@ -58,7 +58,6 @@ function Header() {
             <section className="gallery">
                 <img src="/img/lordsfallen.jpg" alt="" />
                 <img src="/img/the-legend-of-zelda-tears-of-the-kingdom_p893.jpg" alt="" />
-                <img src="/img/Elden-Ring.jpg" alt="" />
                 <img src="/img/diablo-4.jpg" alt="" />
                 <img src="/img/starfield.jpg" alt="" />
                 <img src="/img/Fifa.jpg" alt="" />

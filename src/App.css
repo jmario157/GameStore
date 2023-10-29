@@ -151,6 +151,12 @@ section.gallery img:hover {
 }
 /*** ESTILOS DEL HEADER Y SUB HEADER FINAL****/
 
+.main{
+  width: 100%;
+  background-color: #023e8a;
+  padding-bottom: 1rem;
+}
+
 .card-title {
   position: absolute;
   top: 50px; /* Ajusta la posición vertical según tus necesidades */
@@ -164,6 +170,7 @@ section.gallery img:hover {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 1rem;
   overflow: hidden;
   text-align: center;
   position: relative;
@@ -177,7 +184,6 @@ section.gallery img:hover {
   scroll-snap-type: x mandatory;
   margin-bottom: 20px;
   padding: 10px;
-  background-image: linear-gradient(#023047, #023e8a);
   justify-content: center; /* Centra horizontalmente las tarjetas */
   padding-top: 120px; /* Añade espacio en la parte superior para el título */
   position: relative;
