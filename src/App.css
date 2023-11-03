@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 /*** ESTILOS DEL HEADER Y SUB HEADER ***/
 * {
@@ -30,6 +34,7 @@ header {
 }
 
 .logo span {
+  font-family: 'Nosifer', sans-serif;
   font-size: 2rem;
   font-weight: bold;
 }
@@ -50,6 +55,7 @@ header {
   width: 100%;
   padding: 15px;
   border: 3px solid #fff;
+  color: #fff;
   border-radius: 5px;
   background-color: transparent;
 }
@@ -79,6 +85,12 @@ header {
 .idioma a:hover,
 .login-registro a:hover {
   color: #e63946;
+}
+
+.idioma__link{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .carrito {
@@ -159,12 +171,14 @@ section.gallery img:hover {
 
 .card-title {
   position: absolute;
-  top: 50px; /* Ajusta la posición vertical según tus necesidades */
-  left: 50%; /* Coloca el título en el centro horizontal del contenedor */
-  transform: translateX(-50%); /* Centra horizontalmente el título */
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 10px;
   color: white;
   margin-bottom: 20px;
+  background-color: transparent; /* Elimina el fondo */
+  z-index: 2; /* Asegura que el título esté por encima del contenedor */
 }
 
 .container {
@@ -237,8 +251,9 @@ section.gallery img:hover {
 
 .card__image img {
   width: 100%;
-  height: 50%;
-  display: block; /* Asegúrate de que la imagen se muestre como un bloque */
+  height: auto; /* Ajusta la altura de la imagen automáticamente */
+  display: block;
+  image-rendering: pixelated; /* Mantiene la calidad de la imagen al escalar */
 }
 
 .card__content {
@@ -324,7 +339,8 @@ section.gallery img:hover {
 }
 
 .show-all-button:hover {
-  background-color: #00091d; /* Color gris claro al pasar el ratón */
+  background-color: #fff; /* Color gris claro al pasar el ratón */
+  color: #000;
 }
 
 .like-overlay {
@@ -348,15 +364,38 @@ section.gallery img:hover {
   font-size: 24px; /* Tamaño del corazón */
 }
 
+/* Estilo base para los botones */
+.arrow-button {
+  background-color: #a09b9b; /* Color de fondo gris */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados para suavizar las esquinas */
+  color: white; /* Color del texto blanco */
+  font-size: 20px; /* Tamaño de fuente */
+  width: 70px; /* Ancho del botón */
+  height: 70px; /* Altura del botón */
+  margin: 0 10px; /* Margen horizontal de 5px para separar los botones */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Estilo al pasar el cursor sobre los botones */
+.arrow-button:hover {
+  background-color: #383838; /* Color de fondo gris oscuro al pasar el cursor */
+}
+
 /*Footer*/
 
 h1 {
   color: white;
-  margin-top: 0;
-  padding-right: 730px; /* Ajusta el espaciado izquierdo según tus preferencias */
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .containerfooter {
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -367,8 +406,8 @@ h1 {
 }
 
 .cardfooter {
-  background-color: #5825CC;
-  border: 1px solid #5825CC;
+  background-image: linear-gradient(#023047, #023e8a);
+  border: 1px solid #fff;
   border-radius: 8px;
   padding: 5px;
   margin: 10px;
@@ -377,6 +416,9 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.cardfooter:hover{
+  transform: translateY(-5px);
 }
 
 .cardfooter img {

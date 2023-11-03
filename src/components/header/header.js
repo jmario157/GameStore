@@ -1,6 +1,6 @@
 import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
-import {BrowserRouter, Link} from'react-router-dom';
+import {Link} from'react-router-dom';
 import '../../App.css';
 
 function Header() {
@@ -16,6 +16,7 @@ function Header() {
                 </div>
                 <div className="idioma">
                     <a className="idioma__link" href="https://www.youtube.com/">
+                        <i class="fa-solid fa-globe"></i>
                         <p>Español Latinoamérica</p>
                     </a>
                 </div>
@@ -25,10 +26,10 @@ function Header() {
                     </a>
                 </div>
                 <div className="login-registro">
-                    <a className="login-registro__link" href="#">
+                    <a className="login-registro__link" to="LoginForm">
                         <span className="login-registro__content">
                             <i className="login-registro__icon fa fa-user-circle"></i>
-                            <span className="login-registro__text">Iniciar sesión | Registrarse</span>
+                            <span className="login-registro__text">Iniciar sesión | Registrarse</span> 
                         </span>
                     </a>
                 </div>
@@ -37,9 +38,6 @@ function Header() {
                 <div className="subheader__list">
                     <div className="subheader__item" data-menu="tienda">
                         <a className="subheader__link" href="https://www.youtube.com/">Tienda</a>
-                    </div>
-                    <div className="subheader__item" data-menu="recarga">
-                        <a className="subheader__link" href="https://www.youtube.com/">Recargas Móviles</a>
                     </div>
                     <div className="subheader__item" data-menu="juegos">
                         <a className="subheader__link" href="../views/games.html">Juegos</a>
@@ -52,6 +50,9 @@ function Header() {
                     </div>
                     <div className="subheader__item" data-menu="nintendo">
                         <a className="subheader__link" href="https://www.youtube.com/">Nintendo</a>
+                    </div>
+                    <div className="subheader__item" data-menu="nintendo">
+                        <a className="subheader__link" href="https://www.youtube.com/">PSN</a>
                     </div>
                 </div>
             </nav>
