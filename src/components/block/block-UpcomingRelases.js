@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import '../../App.css';
 
-export const Gift = () => {
+const Relases = () => {
     const scrollContainerRef = React.useRef();
 
     const handleScroll = (scrollOffset) => {
@@ -208,4 +208,4 @@ export const Gift = () => {
     );
 };
 
-export default Gift;
+export default Relases;

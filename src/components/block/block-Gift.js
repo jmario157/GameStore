@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import '../../App.css';
 
-export const Gift = () => {
+const Gift = () => {
     const scrollContainerRef = React.useRef();
 
     const handleScroll = (scrollOffset) => {
