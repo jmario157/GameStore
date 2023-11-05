@@ -234,7 +234,7 @@ section.gallery img:hover {
   background-color: #fff;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  flex: 0 0 calc(25% - 20px);
+  flex: 0 0 calc(30% - 20px);
   scroll-snap-align: start;
   transition: transform 0.2s ease-in-out;
   position: relative;
@@ -251,7 +251,7 @@ section.gallery img:hover {
 
 .card__image img {
   width: 100%;
-  height: auto; /* Ajusta la altura de la imagen automáticamente */
+  height: 400px; /* Ajusta la altura de la imagen automáticamente */
   display: block;
   image-rendering: pixelated; /* Mantiene la calidad de la imagen al escalar */
 }
