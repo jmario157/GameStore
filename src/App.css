@@ -339,8 +339,7 @@ section.gallery img:hover {
 }
 
 .show-all-button:hover {
-  background-color: #fff; /* Color gris claro al pasar el ratón */
-  color: #000;
+  background-color: #00091d; /* Color gris claro al pasar el ratón */
 }
 
 .like-overlay {

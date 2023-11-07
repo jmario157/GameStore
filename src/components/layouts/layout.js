@@ -11,7 +11,13 @@ const Layout = () => {
             <main>
                 <Outlet/>
             </main>
+            <body>
+                <Gifts data={giftData}></Gifts>
+                <Games data={gamesData}></Games>
+                <Relases data={relasesData}></Relases>
+            </body>
         </>
+        
     );
 }
 
